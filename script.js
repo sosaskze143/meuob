@@ -17,12 +17,8 @@ const storage = firebase.storage();
 
 // تفعيل استمرارية الجلسة
 auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-    .then(() => {
-        console.log("استمرارية الجلسة مفعلة.");
-    })
-    .catch((error) => {
-        console.error("خطأ في تفعيل استمرارية الجلسة:", error);
-    });
+    .then(() => console.log("استمرارية الجلسة مفعلة."))
+    .catch((error) => console.error("خطأ في تفعيل استمرارية الجلسة:", error));
 
 // عناصر واجهة المستخدم
 const signinButton = document.getElementById('signin-button');
