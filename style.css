@@ -1,87 +1,89 @@
+/* التصميم العام */
 body {
     font-family: 'Tajawal', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     color: #333;
+    direction: rtl;
 }
 
-header {
-    background-color: #ff4757;
-    color: white;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    text-align: center;
+}
+
+/* الهيدر */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 #user-auth {
+    display: flex;
+    gap: 10px;
     margin-top: 10px;
 }
 
-#user-auth button {
-    background-color: #ffffff;
-    color: #ff4757;
+/* الأزرار */
+.btn {
+    background-color: #007bff;
+    color: white;
     border: none;
     padding: 10px 20px;
-    margin: 5px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-#user-auth button:hover {
-    background-color: #ff6b81;
-    color: white;
-}
-
-.upload-section {
-    text-align: center;
-    margin: 20px;
+.btn:hover {
+    background-color: #0056b3;
 }
 
 .upload-label {
-    background-color: #ff4757;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-right: 10px;
+    background-color: #28a745;
 }
 
 .upload-label:hover {
-    background-color: #ff6b81;
+    background-color: #218838;
 }
 
 #upload-button {
-    background-color: #2ed573;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+    background-color: #dc3545;
 }
 
 #upload-button:hover {
-    background-color: #7bed9f;
+    background-color: #c82333;
 }
 
+/* قسم رفع الفيديوهات */
+.upload-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* قائمة الفيديوهات */
 .video-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
 }
 
 .video-card {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    width: 300px;
     overflow: hidden;
     text-align: center;
 }
@@ -93,16 +95,15 @@ header h1 {
 }
 
 .video-card h3 {
-    margin: 10px;
+    margin: 15px;
     font-size: 1.2rem;
 }
 
+/* الفوتر */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 15px 0;
+    margin-top: 40px;
 }
