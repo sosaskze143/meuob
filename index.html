@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مي يوب</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>مي يوب</h1>
+        <div id="user-auth">
+            <button id="signin-button">تسجيل الدخول</button>
+            <button id="signup-button">إنشاء حساب</button>
+            <button id="signout-button" style="display: none;">تسجيل الخروج</button>
+        </div>
+    </header>
+    <main>
+        <section id="video-upload" class="upload-section">
+            <input type="file" id="video-file" accept="video/*" style="display: none;">
+            <label for="video-file" class="upload-label">اختر فيديو</label>
+            <button id="upload-button">رفع فيديو</button>
+        </section>
+        <section id="video-list" class="video-list">
+            <!-- قائمة الفيديوهات ستظهر هنا -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 مي يوب. جميع الحقوق محفوظة.</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
