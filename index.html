@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +9,29 @@
 </head>
 <body>
     <header>
-        <h1>مي يوب</h1>
-        <div id="user-auth">
-            <button id="signin-button">تسجيل الدخول</button>
-            <button id="signup-button">إنشاء حساب</button>
-            <button id="signout-button" style="display: none;">تسجيل الخروج</button>
+        <div class="container">
+            <h1>مي يوب</h1>
+            <div id="user-auth">
+                <button id="signin-button" class="btn">تسجيل الدخول</button>
+                <button id="signup-button" class="btn">إنشاء حساب</button>
+                <button id="signout-button" class="btn" style="display: none;">تسجيل الخروج</button>
+            </div>
         </div>
     </header>
-    <main>
+    <main class="container">
         <section id="video-upload" class="upload-section">
             <input type="file" id="video-file" accept="video/*" style="display: none;">
-            <label for="video-file" class="upload-label">اختر فيديو</label>
-            <button id="upload-button">رفع فيديو</button>
+            <label for="video-file" class="upload-label btn">اختر فيديو</label>
+            <button id="upload-button" class="btn">رفع فيديو</button>
         </section>
         <section id="video-list" class="video-list">
             <!-- قائمة الفيديوهات ستظهر هنا -->
         </section>
     </main>
     <footer>
-        <p>© 2025 مي يوب. جميع الحقوق محفوظة.</p>
+        <div class="container">
+            <p>© 2025 مي يوب. جميع الحقوق محفوظة.</p>
+        </div>
     </footer>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
